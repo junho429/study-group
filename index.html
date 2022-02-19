@@ -18,7 +18,27 @@
       gtag('js', new Date());
 
       gtag('config', 'G-T2TDV8EJT1');
+
+      gtag('config', 'AW-816672562');
     </script>
+
+    <!-- Event snippet for 함께종교공부방 들어옴 conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-816672562/wYDkCN6u5aIDELLetYUD',
+            'event_callback': callback
+        });
+        return false;
+        }
+        </script>
+    
 </head>
 
 <body>
@@ -26,7 +46,7 @@
         <h1>함께종교공부방</h1>
         <p>함께 종교에 관해서 공부하는 채팅방입니다.</p>
         <br>
-        <a href="https://open.kakao.com/o/gzqtNn0d"><b>함께종교공부방 카톡방 들어가기 비번 1234</b></a></p>
+        <a href="#" onclick="gtag_report_conversion('https://open.kakao.com/o/gzqtNn0d');"><b>함께종교공부방 카톡방 들어가기 비번 1234</b></a></p>
     </header>
     <main>
         <hr>
